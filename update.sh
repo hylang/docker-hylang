@@ -111,10 +111,15 @@ for base in "${bases[@]}"; do
 
 			echo "- $from ($target)"
 
+			case "$variant" in
+				windowsservercore-*) template='Dockerfile-windows.template' ;;
+				*) template='Dockerfile-linux.template' ;;
+			esac
+
 			sed -r \
 				-e "s!%%FROM%%!$from!g" \
 				-e "s!%%VERSION%%!$version!g" \
-				../Dockerfile.template >> "$target"
+				"../$template" >> "$target"
 
 			extraBashbrew="$(grep -E '^(Architectures|Constraints):' <<<"$bashbrewCat")"
 			cat >> library-hylang.template <<-EOE
