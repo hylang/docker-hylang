@@ -2,6 +2,6 @@ FROM python:3.5-jessie
 
 ENV HY_VERSION 0.16.0
 
-RUN pip install --no-cache-dir "hy == $HY_VERSION"
+RUN pip install --no-cache-dir "hy==$HY_VERSION"
 
 CMD ["hy"]
