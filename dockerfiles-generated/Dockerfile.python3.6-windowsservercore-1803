@@ -1,0 +1,7 @@
+FROM python:3.6-windowsservercore-1803
+
+ENV HY_VERSION 0.16.0
+
+RUN pip install --no-cache-dir "hy == $HY_VERSION"
+
+CMD ["hy"]
