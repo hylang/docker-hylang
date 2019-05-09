@@ -1,0 +1,100 @@
+language: bash
+services: docker
+
+matrix:
+  include:
+    - os: linux
+      env: TAG=python3.7-stretch
+    - os: linux
+      env: TAG=python3.7-slim-stretch
+    - os: linux
+      env: TAG=python3.7-alpine3.9
+    - os: linux
+      env: TAG=python3.7-alpine3.8
+    - os: windows
+      dist: 1803-containers
+      env: TAG=python3.7-windowsservercore-1803
+    - os: linux
+      env: TAG=python3.6-stretch
+    - os: linux
+      env: TAG=python3.6-slim-stretch
+    - os: linux
+      env: TAG=python3.6-jessie
+    - os: linux
+      env: TAG=python3.6-slim-jessie
+    - os: linux
+      env: TAG=python3.6-alpine3.9
+    - os: linux
+      env: TAG=python3.6-alpine3.8
+    - os: windows
+      dist: 1803-containers
+      env: TAG=python3.6-windowsservercore-1803
+    - os: linux
+      env: TAG=python3.5-stretch
+    - os: linux
+      env: TAG=python3.5-slim-stretch
+    - os: linux
+      env: TAG=python3.5-jessie
+    - os: linux
+      env: TAG=python3.5-slim-jessie
+    - os: linux
+      env: TAG=python3.5-alpine3.9
+    - os: linux
+      env: TAG=python3.5-alpine3.8
+    - os: linux
+      env: TAG=python2.7-stretch
+    - os: linux
+      env: TAG=python2.7-slim-stretch
+    - os: linux
+      env: TAG=python2.7-jessie
+    - os: linux
+      env: TAG=python2.7-slim-jessie
+    - os: linux
+      env: TAG=python2.7-alpine3.9
+    - os: linux
+      env: TAG=python2.7-alpine3.8
+    - os: windows
+      dist: 1803-containers
+      env: TAG=python2.7-windowsservercore-1803
+    - os: linux
+      env: TAG=pypy3.6-stretch
+    - os: linux
+      env: TAG=pypy3.6-slim-stretch
+    - os: linux
+      env: TAG=pypy3.5-stretch
+    - os: linux
+      env: TAG=pypy3.5-slim-stretch
+    - os: linux
+      env: TAG=pypy2.7-jessie
+    - os: linux
+      env: TAG=pypy2.7-slim-jessie
+
+install:
+  - git clone https://github.com/docker-library/official-images.git ~/official-images
+
+before_script:
+  - env | sort
+  - cd dockerfiles-generated
+  - image="hylang:$TAG"
+  - dockerfile="Dockerfile.$TAG"
+
+script:
+  - |
+    (
+      set -Eeuo pipefail
+      set -x
+      docker build -t "$image" -f "$dockerfile" .
+      if [ "$TRAVIS_OS_NAME" = 'windows' ]; then
+        # TODO make the tests run successfully on Windows too!
+        docker run --rm "$image" hy --version
+        twoPlusTwo="$(docker run --rm "$image" hy -c '(print (+ 2 2))')"
+        [ "$twoPlusTwo" = '4' ]
+      else
+        ~/official-images/test/run.sh "$image"
+      fi
+    )
+
+after_script:
+  - docker images
+
+# vim:set et ts=2 sw=2:

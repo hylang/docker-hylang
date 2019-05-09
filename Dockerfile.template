@@ -1,0 +1,7 @@
+FROM %%FROM%%
+
+ENV HY_VERSION %%VERSION%%
+
+RUN pip install --no-cache-dir "hy == $HY_VERSION"
+
+CMD ["hy"]
