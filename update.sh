@@ -68,9 +68,9 @@ for base in "${bases[@]}"; do
 	for python in $pythonVersions; do
 		for variant in "${variants[@]}"; do
 			from="$base:$python-$variant"
-
 			fromUrl="https://github.com/docker-library/official-images/raw/master/library/$from"
 			if ! bashbrewCat="$(bashbrew cat "$fromUrl" 2> /dev/null)"; then
+				# TODO handle python pre-release versions (3.8-rc, etc) in such a way that they don't get preferred over release versions
 				continue
 			fi
 
