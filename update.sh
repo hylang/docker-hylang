@@ -17,13 +17,11 @@ bases=(
 	pypy
 )
 variants=(
-	stretch slim-stretch
-	jessie slim-jessie
+	stretch jessie
 	alpine3.9 alpine3.8
 	windowsservercore-1809 windowsservercore-1803 windowsservercore-ltsc2016
 )
 declare -A variantAliases=(
-	[slim-stretch]='slim'
 	[alpine3.9]='alpine'
 )
 declare -A sharedTags=(
@@ -67,10 +65,16 @@ travisMatrixInclude=
 for base in "${bases[@]}"; do
 	for python in $pythonVersions; do
 		for variant in "${variants[@]}"; do
-			from="$base:$python-$variant"
-			fromUrl="https://github.com/docker-library/official-images/raw/master/library/$from"
-			if ! bashbrewCat="$(bashbrew cat "$fromUrl" 2> /dev/null)"; then
-				# TODO handle python pre-release versions (3.8-rc, etc) in such a way that they don't get preferred over release versions
+			from=
+			for tryFrom in "$base:$python-slim-$variant" "$base:$python-$variant"; do
+				fromUrl="https://github.com/docker-library/official-images/raw/master/library/$tryFrom"
+				if bashbrewCat="$(bashbrew cat "$fromUrl" 2> /dev/null)"; then
+					from="$tryFrom"
+					break
+				fi
+			done
+			# TODO handle python pre-release versions (3.8-rc, etc) in such a way that they don't get preferred over release versions
+			if [ -z "$from" ]; then
 				continue
 			fi
 

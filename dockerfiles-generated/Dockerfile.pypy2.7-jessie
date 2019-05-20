@@ -1,4 +1,4 @@
-FROM pypy:2.7-jessie
+FROM pypy:2.7-slim-jessie
 
 ENV HY_VERSION 0.17.0
 

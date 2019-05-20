@@ -6,8 +6,6 @@ matrix:
     - os: linux
       env: TAG=python3.7-stretch
     - os: linux
-      env: TAG=python3.7-slim-stretch
-    - os: linux
       env: TAG=python3.7-alpine3.9
     - os: linux
       env: TAG=python3.7-alpine3.8
@@ -17,11 +15,7 @@ matrix:
     - os: linux
       env: TAG=python3.6-stretch
     - os: linux
-      env: TAG=python3.6-slim-stretch
-    - os: linux
       env: TAG=python3.6-jessie
-    - os: linux
-      env: TAG=python3.6-slim-jessie
     - os: linux
       env: TAG=python3.6-alpine3.9
     - os: linux
@@ -32,11 +26,7 @@ matrix:
     - os: linux
       env: TAG=python3.5-stretch
     - os: linux
-      env: TAG=python3.5-slim-stretch
-    - os: linux
       env: TAG=python3.5-jessie
-    - os: linux
-      env: TAG=python3.5-slim-jessie
     - os: linux
       env: TAG=python3.5-alpine3.9
     - os: linux
@@ -44,11 +34,7 @@ matrix:
     - os: linux
       env: TAG=python2.7-stretch
     - os: linux
-      env: TAG=python2.7-slim-stretch
-    - os: linux
       env: TAG=python2.7-jessie
-    - os: linux
-      env: TAG=python2.7-slim-jessie
     - os: linux
       env: TAG=python2.7-alpine3.9
     - os: linux
@@ -59,15 +45,9 @@ matrix:
     - os: linux
       env: TAG=pypy3.6-stretch
     - os: linux
-      env: TAG=pypy3.6-slim-stretch
-    - os: linux
       env: TAG=pypy3.5-stretch
     - os: linux
-      env: TAG=pypy3.5-slim-stretch
-    - os: linux
       env: TAG=pypy2.7-jessie
-    - os: linux
-      env: TAG=pypy2.7-slim-jessie
 
 install:
   - git clone https://github.com/docker-library/official-images.git ~/official-images

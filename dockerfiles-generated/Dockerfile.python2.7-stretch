@@ -1,4 +1,4 @@
-FROM python:2.7-stretch
+FROM python:2.7-slim-stretch
 
 ENV HY_VERSION 0.17.0
 

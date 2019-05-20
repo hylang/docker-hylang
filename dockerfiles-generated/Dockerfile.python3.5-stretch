@@ -1,4 +1,4 @@
-FROM python:3.5-stretch
+FROM python:3.5-slim-stretch
 
 ENV HY_VERSION 0.17.0
 
