@@ -2,7 +2,7 @@
 
 ## Maintained by: [Paul Tagliamonte, Hy BDFL](https://github.com/hylang/hy)
 
-This is the Git repo of the [Docker "Official Image"](https://github.com/docker-library/official-images#what-are-official-images) for [hylang](https://hub.docker.com/_/hylang/) (not to be confused with any official hylang image provided by hylang upstream). See [the Docker Hub page](https://hub.docker.com/_/hylang/) for the full readme on how to use this Docker image and for information regarding contributing and issues.
+This is the Git repo of the [Docker "Official Image"](https://github.com/docker-library/official-images#what-are-official-images) for [hylang](https://hub.docker.com/_/hylang/). See [the Docker Hub page](https://hub.docker.com/_/hylang/) for the full readme on how to use this Docker image and for information regarding contributing and issues.
 
 The [full description from Docker Hub](https://hub.docker.com/_/hylang/) is generated over in [docker-library/docs](https://github.com/docker-library/docs), specifically in [docker-library/docs/hylang](https://github.com/docker-library/docs/tree/master/hylang).
 
@@ -13,6 +13,11 @@ Check [the "library/hylang" manifest file in the docker-library/official-images 
 For more information about the official images process, see the [docker-library/official-images readme](https://github.com/docker-library/official-images/blob/master/README.md).
 
 ---
+
+-	[Travis CI:  
+	![build status badge](https://img.shields.io/travis/hylang/docker-hylang/master.svg)](https://travis-ci.org/hylang/docker-hylang/branches)
+-	[Automated `update.sh`:  
+	![build status badge](https://doi-janky.infosiftr.net/job/update.sh/job/hylang/badge/icon)](https://doi-janky.infosiftr.net/job/update.sh/job/hylang)
 
 | Build | Status | Badges | (per-arch) |
 |:-:|:-:|:-:|:-:|
