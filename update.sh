@@ -41,8 +41,8 @@ mkdir dockerfiles-generated
 cd dockerfiles-generated
 
 cat > library-hylang.template <<-'EOH'
-	Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag)
-	GitRepo: https://github.com/tianon/docker-hylang.git
+	Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
+	GitRepo: https://github.com/hylang/docker-hylang.git
 	GitCommit: %%COMMIT%%
 	Directory: dockerfiles-generated
 EOH
