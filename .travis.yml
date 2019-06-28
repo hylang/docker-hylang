@@ -6,9 +6,9 @@ matrix:
     - os: linux
       env: TAG=python3.7-stretch
     - os: linux
-      env: TAG=python3.7-alpine3.9
+      env: TAG=python3.7-alpine3.10
     - os: linux
-      env: TAG=python3.7-alpine3.8
+      env: TAG=python3.7-alpine3.9
     - os: windows
       dist: 1803-containers
       env: TAG=python3.7-windowsservercore-1803
@@ -17,9 +17,9 @@ matrix:
     - os: linux
       env: TAG=python3.6-jessie
     - os: linux
-      env: TAG=python3.6-alpine3.9
+      env: TAG=python3.6-alpine3.10
     - os: linux
-      env: TAG=python3.6-alpine3.8
+      env: TAG=python3.6-alpine3.9
     - os: windows
       dist: 1803-containers
       env: TAG=python3.6-windowsservercore-1803
@@ -28,17 +28,17 @@ matrix:
     - os: linux
       env: TAG=python3.5-jessie
     - os: linux
-      env: TAG=python3.5-alpine3.9
+      env: TAG=python3.5-alpine3.10
     - os: linux
-      env: TAG=python3.5-alpine3.8
+      env: TAG=python3.5-alpine3.9
     - os: linux
       env: TAG=python2.7-stretch
     - os: linux
       env: TAG=python2.7-jessie
     - os: linux
-      env: TAG=python2.7-alpine3.9
+      env: TAG=python2.7-alpine3.10
     - os: linux
-      env: TAG=python2.7-alpine3.8
+      env: TAG=python2.7-alpine3.9
     - os: windows
       dist: 1803-containers
       env: TAG=python2.7-windowsservercore-1803

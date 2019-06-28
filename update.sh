@@ -17,8 +17,8 @@ bases=(
 	pypy
 )
 variants=(
-	stretch jessie
-	alpine3.9 alpine3.8
+	buster stretch jessie
+	alpine3.10 alpine3.9 alpine3.8
 	windowsservercore-1809 windowsservercore-1803 windowsservercore-ltsc2016
 )
 declare -A variantAliases=(
