@@ -1,0 +1,7 @@
+FROM python:2.7-slim-buster
+
+ENV HY_VERSION 0.17.0
+
+RUN pip install --no-cache-dir "hy == $HY_VERSION"
+
+CMD ["hy"]
