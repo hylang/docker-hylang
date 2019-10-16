@@ -22,10 +22,10 @@ variants=(
 	windowsservercore-1809 windowsservercore-1803 windowsservercore-ltsc2016
 )
 declare -A variantAliases=(
-	[alpine3.9]='alpine'
+	[alpine3.10]='alpine'
 )
 declare -A sharedTags=(
-	[stretch]='latest'
+	[buster]='latest'
 )
 for variant in "${variants[@]}"; do if [[ "$variant" == windowsservercore-* ]]; then sharedTags[$variant]='latest'; fi; done
 
