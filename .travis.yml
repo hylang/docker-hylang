@@ -4,6 +4,8 @@ services: docker
 matrix:
   include:
     - os: linux
+      env: TAG=python3.7-buster
+    - os: linux
       env: TAG=python3.7-stretch
     - os: linux
       env: TAG=python3.7-alpine3.10
@@ -13,28 +15,25 @@ matrix:
       dist: 1803-containers
       env: TAG=python3.7-windowsservercore-1803
     - os: linux
-      env: TAG=python3.6-stretch
+      env: TAG=python3.6-buster
     - os: linux
-      env: TAG=python3.6-jessie
+      env: TAG=python3.6-stretch
     - os: linux
       env: TAG=python3.6-alpine3.10
     - os: linux
       env: TAG=python3.6-alpine3.9
-    - os: windows
-      dist: 1803-containers
-      env: TAG=python3.6-windowsservercore-1803
+    - os: linux
+      env: TAG=python3.5-buster
     - os: linux
       env: TAG=python3.5-stretch
-    - os: linux
-      env: TAG=python3.5-jessie
     - os: linux
       env: TAG=python3.5-alpine3.10
     - os: linux
       env: TAG=python3.5-alpine3.9
     - os: linux
-      env: TAG=python2.7-stretch
+      env: TAG=python2.7-buster
     - os: linux
-      env: TAG=python2.7-jessie
+      env: TAG=python2.7-stretch
     - os: linux
       env: TAG=python2.7-alpine3.10
     - os: linux
@@ -44,8 +43,6 @@ matrix:
       env: TAG=python2.7-windowsservercore-1803
     - os: linux
       env: TAG=pypy3.6-stretch
-    - os: linux
-      env: TAG=pypy3.5-stretch
     - os: linux
       env: TAG=pypy2.7-jessie
 
