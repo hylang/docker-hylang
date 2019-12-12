@@ -11,9 +11,6 @@ matrix:
       env: TAG=python3.7-alpine3.10
     - os: linux
       env: TAG=python3.7-alpine3.9
-    - os: windows
-      dist: 1803-containers
-      env: TAG=python3.7-windowsservercore-1803
     - os: linux
       env: TAG=python3.6-buster
     - os: linux
@@ -38,9 +35,6 @@ matrix:
       env: TAG=python2.7-alpine3.10
     - os: linux
       env: TAG=python2.7-alpine3.9
-    - os: windows
-      dist: 1803-containers
-      env: TAG=python2.7-windowsservercore-1803
     - os: linux
       env: TAG=pypy3.6-stretch
     - os: linux

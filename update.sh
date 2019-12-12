@@ -19,7 +19,7 @@ bases=(
 variants=(
 	buster stretch jessie
 	alpine3.10 alpine3.9 alpine3.8
-	windowsservercore-1809 windowsservercore-1803 windowsservercore-ltsc2016
+	windowsservercore-1809 windowsservercore-ltsc2016
 )
 declare -A variantAliases=(
 	[alpine3.10]='alpine'
@@ -135,7 +135,6 @@ for base in "${bases[@]}"; do
 
 			osTravis='linux'
 			case "$variant" in
-				windowsservercore-1803) osTravis="windows\n      dist: ${variant#windowsservercore-}-containers" ;;
 				windowsservercore-*) osTravis= ;; # no Travis support for non-1803 (yet?)
 			esac
 			[ -z "$osTravis" ] || travisMatrixInclude+="\n    - os: $osTravis\n      env: TAG=$hyTag"
