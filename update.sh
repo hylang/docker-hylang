@@ -12,6 +12,9 @@ pythonVersions="$(
 		| sort -rV
 )"
 
+# TODO Hy 0.17.0 doesn't support Python 3.8 (it broke somewhere between the 3.8 alphas and GA but is fixed in Hy master): https://github.com/hylang/docker-hylang/pull/2#issuecomment-542978200
+pythonVersions="$(grep -vE '^3[.]8$' <<<"$pythonVersions")"
+
 bases=(
 	python
 	pypy
