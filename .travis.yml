@@ -10,15 +10,11 @@ matrix:
     - os: linux
       env: TAG=python3.7-alpine3.10
     - os: linux
-      env: TAG=python3.7-alpine3.9
-    - os: linux
       env: TAG=python3.6-buster
     - os: linux
       env: TAG=python3.6-stretch
     - os: linux
       env: TAG=python3.6-alpine3.10
-    - os: linux
-      env: TAG=python3.6-alpine3.9
     - os: linux
       env: TAG=python3.5-buster
     - os: linux
@@ -26,15 +22,11 @@ matrix:
     - os: linux
       env: TAG=python3.5-alpine3.10
     - os: linux
-      env: TAG=python3.5-alpine3.9
-    - os: linux
       env: TAG=python2.7-buster
     - os: linux
       env: TAG=python2.7-stretch
     - os: linux
       env: TAG=python2.7-alpine3.10
-    - os: linux
-      env: TAG=python2.7-alpine3.9
     - os: linux
       env: TAG=pypy3.6-stretch
     - os: linux

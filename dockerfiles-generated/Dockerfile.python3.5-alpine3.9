@@ -1,7 +1,0 @@
-FROM python:3.5-alpine3.9
-
-ENV HY_VERSION 0.17.0
-
-RUN pip install --no-cache-dir "hy == $HY_VERSION"
-
-CMD ["hy"]
