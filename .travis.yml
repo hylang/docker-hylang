@@ -4,9 +4,17 @@ services: docker
 matrix:
   include:
     - os: linux
+      env: TAG=python3.8-buster
+    - os: linux
+      env: TAG=python3.8-alpine
+    - os: linux
+      env: TAG=python3.8-alpine3.10
+    - os: linux
       env: TAG=python3.7-buster
     - os: linux
       env: TAG=python3.7-stretch
+    - os: linux
+      env: TAG=python3.7-alpine
     - os: linux
       env: TAG=python3.7-alpine3.10
     - os: linux
@@ -14,23 +22,19 @@ matrix:
     - os: linux
       env: TAG=python3.6-stretch
     - os: linux
+      env: TAG=python3.6-alpine
+    - os: linux
       env: TAG=python3.6-alpine3.10
     - os: linux
       env: TAG=python3.5-buster
     - os: linux
       env: TAG=python3.5-stretch
     - os: linux
+      env: TAG=python3.5-alpine
+    - os: linux
       env: TAG=python3.5-alpine3.10
     - os: linux
-      env: TAG=python2.7-buster
-    - os: linux
-      env: TAG=python2.7-stretch
-    - os: linux
-      env: TAG=python2.7-alpine3.10
-    - os: linux
       env: TAG=pypy3.6-stretch
-    - os: linux
-      env: TAG=pypy2.7-jessie
 
 install:
   - git clone https://github.com/docker-library/official-images.git ~/official-images

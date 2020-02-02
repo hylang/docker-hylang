@@ -12,20 +12,17 @@ pythonVersions="$(
 		| sort -rV
 )"
 
-# TODO Hy 0.17.0 doesn't support Python 3.8 (it broke somewhere between the 3.8 alphas and GA but is fixed in Hy master): https://github.com/hylang/docker-hylang/pull/2#issuecomment-542978200
-pythonVersions="$(grep -vE '^3[.]8$' <<<"$pythonVersions")"
-
 bases=(
 	python
 	pypy
 )
 variants=(
 	buster stretch jessie
-	alpine3.10 alpine3.9 alpine3.8
+	alpine 3.11 alpine3.10
 	windowsservercore-1809 windowsservercore-ltsc2016
 )
 declare -A variantAliases=(
-	[alpine3.10]='alpine'
+	[alpine3.11]='alpine'
 )
 declare -A sharedTags=(
 	[buster]='latest'

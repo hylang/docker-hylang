@@ -1,6 +1,6 @@
 FROM pypy:3.6-slim-stretch
 
-ENV HY_VERSION 0.17.0
+ENV HY_VERSION 0.18.0
 
 RUN pip install --no-cache-dir "hy == $HY_VERSION"
 
