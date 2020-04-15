@@ -34,7 +34,7 @@ matrix:
     - os: linux
       env: TAG=python3.5-alpine3.10
     - os: linux
-      env: TAG=pypy3.6-stretch
+      env: TAG=pypy3.6-buster
 
 install:
   - git clone https://github.com/docker-library/official-images.git ~/official-images
