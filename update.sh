@@ -61,7 +61,6 @@ versionAliases+=( latest )
 # versionAliases=(  0.16.0  0.16  0  latest  )
 
 command -v bashbrew > /dev/null
-travisMatrixInclude=
 for base in "${bases[@]}"; do
 	for python in $pythonVersions; do
 		for variant in "${variants[@]}"; do
@@ -132,16 +131,6 @@ for base in "${bases[@]}"; do
 				$extraBashbrew
 				File: $target
 			EOE
-
-			osTravis='linux'
-			case "$variant" in
-				windowsservercore-*) osTravis= ;; # no Travis support for non-1803 (yet?)
-			esac
-			[ -z "$osTravis" ] || travisMatrixInclude+="\n    - os: $osTravis\n      env: TAG=$hyTag"
 		done
 	done
 done
-
-[ -n "$travisMatrixInclude" ]
-travis="$(awk -v 'RS=\n\n' '$1 == "matrix:" { $0 = "matrix:\n  include:'"$travisMatrixInclude"'" } { printf "%s%s", $0, RS }' ../.travis.yml)"
-cat <<<"$travis" > ../.travis.yml
