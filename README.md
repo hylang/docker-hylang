@@ -14,7 +14,7 @@ For outstanding `hylang` image PRs, check [PRs with the "library/hylang" label o
 
 ---
 
--	[![build status badge](https://img.shields.io/github/workflow/status/hylang/hy/GitHub%20CI/master?label=GitHub%20CI)](https://github.com/hylang/hy/actions?query=workflow%3A%22GitHub+CI%22+branch%3Amaster)
+-	[![build status badge](https://img.shields.io/github/workflow/status/hylang/docker-hylang/GitHub%20CI/master?label=GitHub%20CI)](https://github.com/hylang/docker-hylang/actions?query=workflow%3A%22GitHub+CI%22+branch%3Amaster)
 -	[![build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/update.sh/job/hylang.svg?label=Automated%20update.sh)](https://doi-janky.infosiftr.net/job/update.sh/job/hylang/)
 
 | Build | Status | Badges | (per-arch) |
