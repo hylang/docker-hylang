@@ -18,7 +18,7 @@ bases=(
 )
 variants=(
 	buster stretch jessie
-	alpine 3.11 alpine3.10
+	alpine3.11 alpine3.10
 	windowsservercore-1809 windowsservercore-ltsc2016
 )
 declare -A variantAliases=(

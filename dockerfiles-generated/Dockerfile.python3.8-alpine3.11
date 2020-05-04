@@ -1,4 +1,4 @@
-FROM python:3.6-alpine
+FROM python:3.8-alpine3.11
 
 ENV HY_VERSION 0.18.0
 
