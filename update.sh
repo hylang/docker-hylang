@@ -17,12 +17,12 @@ bases=(
 	pypy
 )
 variants=(
-	buster stretch jessie
-	alpine3.11 alpine3.10
+	buster stretch
+	alpine3.12 alpine3.11
 	windowsservercore-1809 windowsservercore-ltsc2016
 )
 declare -A variantAliases=(
-	[alpine3.11]='alpine'
+	[alpine3.12]='alpine'
 )
 declare -A sharedTags=(
 	[buster]='latest'
