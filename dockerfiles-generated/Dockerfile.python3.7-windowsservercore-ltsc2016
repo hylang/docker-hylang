@@ -1,7 +1,0 @@
-FROM python:3.7-windowsservercore-ltsc2016
-
-ENV HY_VERSION 0.20.0
-
-RUN pip install --no-cache-dir ('hy == {0}' -f $env:HY_VERSION)
-
-CMD ["hy"]
