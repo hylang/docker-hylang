@@ -7,10 +7,16 @@ version="$(jq -r '.info.version' <<<"$pypi")"
 echo "Hy $version"
 
 pythonVersions="$(
-	jq -r '.info.classifiers[]' <<<"$pypi" \
-		| sed -rn 's/^Programming Language :: Python :: ([0-9]+[.][0-9]+)$/\1/p' \
+	jq -r '
+		.info.classifiers[]
+		| select(startswith("Programming Language :: Python :: "))
+		| ltrimstr("Programming Language :: Python :: ")
+		| select(test("^[0-9]+[.][0-9]+"))
+		| @sh
+	' <<<"$pypi" \
 		| sort -rV
 )"
+eval "pythonVersions=( $pythonVersions )"
 
 bases=(
 	python
@@ -40,6 +46,9 @@ rm -rf dockerfiles-generated
 mkdir dockerfiles-generated
 cd dockerfiles-generated
 
+tmp="$(mktemp -d)"
+trap "$(printf 'rm -rf %q' "$tmp")" EXIT
+
 cat > library-hylang.template <<-'EOH'
 	Maintainers: Paul Tagliamonte <paultag@hylang.org> (@paultag), Hy Docker Team (@hylang/docker)
 	GitRepo: https://github.com/hylang/docker-hylang.git
@@ -53,26 +62,29 @@ declare -A latest=(
 
 fullVersion="$version"
 versionAliases=( "$fullVersion" )
-while [ "${fullVersion%[.-]*}" != "$fullVersion" ]; do
-	fullVersion="${fullVersion%[.-]*}"
-	versionAliases+=( "$fullVersion" )
-done
+if [[ "$fullVersion" != *[a-z]* ]]; then
+	# if version is not a pre-release (1.0a1), also publish descending tag aliases ("0.16", "0")
+	while [ "${fullVersion%[.-]*}" != "$fullVersion" ]; do
+		fullVersion="${fullVersion%[.-]*}"
+		versionAliases+=( "$fullVersion" )
+	done
+fi
 versionAliases+=( latest )
 # versionAliases=(  0.16.0  0.16  0  latest  )
 
 command -v bashbrew > /dev/null
 for base in "${bases[@]}"; do
-	for python in $pythonVersions; do
+	wget -qO "$tmp/$base" "https://github.com/docker-library/official-images/raw/master/library/$base"
+	for python in "${pythonVersions[@]}" "${pythonVersions[@]/%/-rc}"; do
 		for variant in "${variants[@]}"; do
 			from=
 			for tryFrom in "$base:$python-slim-$variant" "$base:$python-$variant"; do
-				fromUrl="https://github.com/docker-library/official-images/raw/master/library/$tryFrom"
+				fromUrl="$tmp/$tryFrom"
 				if bashbrewCat="$(bashbrew cat "$fromUrl" 2> /dev/null)"; then
 					from="$tryFrom"
 					break
 				fi
 			done
-			# TODO handle python pre-release versions (3.8-rc, etc) in such a way that they don't get preferred over release versions
 			if [ -z "$from" ]; then
 				continue
 			fi
@@ -85,8 +97,11 @@ for base in "${bases[@]}"; do
 			baseAliases=( "${baseAliases[@]//latest-/}" )
 
 			basePythonAliases=( "${versionAliases[@]/%/-$base$python}" ) # "0.16.0-python3.7", "0.16.0-pypy3.7"
-			: "${latest[$base]:=$python}" # keep track of which Python version comes first for each "base"
-			if [ "${latest[$base]}" = "$python" ]; then
+			if [[ "$python" != *-rc ]]; then
+				# handle python pre-release versions (3.8-rc, etc) separately so that they don't get preferred as "latest" over release versions
+				: "${latest[$base]:=$python}" # keep track of which Python version comes first for each "base"
+			fi
+			if [ "${latest[$base]:-}" = "$python" ]; then
 				basePythonAliases+=( "${baseAliases[@]}" )
 			fi
 			basePythonAliases=( "${basePythonAliases[@]//latest-/}" )
@@ -101,9 +116,6 @@ for base in "${bases[@]}"; do
 			variantSharedTags=()
 			for sharedTag in ${sharedTags[$variant]:-}; do
 				variantSharedTags+=( "${basePythonAliases[@]/%/-$sharedTag}" )
-				#if [ "$sharedTag" = 'latest' ] && [ "${latest[$base]}" = "$python" ]; then
-				#	variantSharedTags+=( "${baseAliases[@]}" )
-				#fi
 				variantSharedTags=( "${variantSharedTags[@]//-latest/}" )
 			done
 			variantSharedTags="$(join ', ' "${variantSharedTags[@]}")"
