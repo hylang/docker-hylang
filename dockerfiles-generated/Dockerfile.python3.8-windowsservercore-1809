@@ -1,7 +1,0 @@
-FROM python:3.8-windowsservercore-1809
-
-ENV HY_VERSION 1.0a1
-
-RUN pip install --no-cache-dir ('hy == {0}' -f $env:HY_VERSION)
-
-CMD ["hy"]
