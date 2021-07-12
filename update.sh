@@ -37,11 +37,11 @@ bases=(
 )
 variants=(
 	buster stretch
-	alpine3.13 alpine3.12
+	alpine3.14 alpine3.13
 	windowsservercore-1809 windowsservercore-ltsc2016
 )
 declare -A variantAliases=(
-	[alpine3.13]='alpine'
+	[alpine3.14]='alpine'
 )
 declare -A sharedTags=(
 	[buster]='latest'
