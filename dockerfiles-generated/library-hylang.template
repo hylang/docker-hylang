@@ -102,7 +102,7 @@ File: Dockerfile.python3.10-rc-alpine3.13
 
 Tags: 1.0a3-pypy3.7-bullseye, pypy3.7-bullseye, 1.0a3-pypy-bullseye, pypy-bullseye
 SharedTags: 1.0a3-pypy3.7, pypy3.7, 1.0a3-pypy, pypy
-Architectures: amd64, arm64v8, i386, s390x
+Architectures: amd64, arm64v8, i386
 File: Dockerfile.pypy3.7-bullseye
 
 Tags: 1.0a3-pypy3.7-buster, pypy3.7-buster, 1.0a3-pypy-buster, pypy-buster
