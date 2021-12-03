@@ -36,12 +36,12 @@ bases=(
 	pypy
 )
 variants=(
-	bullseye buster stretch
-	alpine3.14 alpine3.13
-	windowsservercore-1809 windowsservercore-ltsc2016
+	bullseye buster
+	alpine3.15 alpine3.14
+	windowsservercore-ltsc2022 windowsservercore-1809 windowsservercore-ltsc2016
 )
 declare -A variantAliases=(
-	[alpine3.14]='alpine'
+	[alpine3.15]='alpine'
 )
 declare -A sharedTags=(
 	[bullseye]='latest'
