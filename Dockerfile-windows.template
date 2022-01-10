@@ -1,7 +1,8 @@
 FROM %%FROM%%
 
 ENV HY_VERSION %%VERSION%%
+ENV HYRULE_VERSION %%HYRULE%%
 
-RUN pip install --no-cache-dir ('hy == {0}' -f $env:HY_VERSION)
+RUN pip install --no-cache-dir ('hy == {0}' -f $env:HY_VERSION) ('hyrule == {0}' -f $env:HYRULE_VERSION)
 
 CMD ["hy"]
