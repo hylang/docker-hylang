@@ -1,7 +1,8 @@
 FROM python:3.9-slim-bullseye
 
-ENV HY_VERSION 1.0a3
+ENV HY_VERSION 1.0a4
+ENV HYRULE_VERSION 0.1
 
-RUN pip install --no-cache-dir "hy == $HY_VERSION"
+RUN pip install --no-cache-dir "hy == $HY_VERSION" "hyrule == $HYRULE_VERSION"
 
 CMD ["hy"]

@@ -17,7 +17,10 @@ version="$(
 )"
 pypi="$(wget -qO- "https://pypi.org/pypi/hy/$version/json")"
 
-echo "Hy $version"
+hyrule="$(wget -qO- 'https://pypi.org/pypi/hyrule/json')"
+hyrule="$(jq -r '.info.version' <<<"$hyrule")"
+
+echo "Hy $version (hyrule $hyrule)"
 
 pythonVersions="$(
 	jq -r '
@@ -153,6 +156,7 @@ for base in "${bases[@]}"; do
 			sed -r \
 				-e "s!%%FROM%%!$from!g" \
 				-e "s!%%VERSION%%!$version!g" \
+				-e "s!%%HYRULE%%!$hyrule!g" \
 				"../$template" >> "$target"
 
 			extraBashbrew="$(grep -E '^(Architectures|Constraints):' <<<"$bashbrewCat")"
