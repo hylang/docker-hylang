@@ -41,7 +41,7 @@ bases=(
 variants=(
 	bullseye buster
 	alpine3.15 alpine3.14
-	windowsservercore-ltsc2022 windowsservercore-1809 windowsservercore-ltsc2016
+	windowsservercore-ltsc2022 windowsservercore-1809
 )
 declare -A variantAliases=(
 	[alpine3.15]='alpine'

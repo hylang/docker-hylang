@@ -49,12 +49,6 @@ Architectures: windows-amd64
 Constraints: windowsservercore-1809
 File: Dockerfile.python3.9-windowsservercore-1809
 
-Tags: 1.0a4-python3.9-windowsservercore-ltsc2016, python3.9-windowsservercore-ltsc2016
-SharedTags: 1.0a4-python3.9, python3.9
-Architectures: windows-amd64
-Constraints: windowsservercore-ltsc2016
-File: Dockerfile.python3.9-windowsservercore-ltsc2016
-
 Tags: 1.0a4-python3.8-bullseye, python3.8-bullseye
 SharedTags: 1.0a4-python3.8, python3.8
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
