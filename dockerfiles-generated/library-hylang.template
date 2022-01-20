@@ -5,11 +5,11 @@ Directory: dockerfiles-generated
 
 Tags: 1.0a4-python3.10-bullseye, python3.10-bullseye, 1.0a4-bullseye, bullseye
 SharedTags: 1.0a4-python3.10, python3.10, 1.0a4, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.10-bullseye
 
 Tags: 1.0a4-python3.10-buster, python3.10-buster, 1.0a4-buster, buster
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, mips64le, ppc64le, s390x
+Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.10-buster
 
 Tags: 1.0a4-python3.10-alpine3.15, python3.10-alpine3.15, 1.0a4-alpine3.15, alpine3.15, 1.0a4-python3.10-alpine, python3.10-alpine, 1.0a4-alpine, alpine
