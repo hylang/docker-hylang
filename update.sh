@@ -91,6 +91,16 @@ versionAliases+=( latest )
 command -v bashbrew > /dev/null
 for base in "${bases[@]}"; do
 	wget -qO "$tmp/$base" "https://github.com/docker-library/official-images/raw/master/library/$base"
+	if [ "$base" = 'pypy' ]; then
+		# pypy is kind of unique about how they handle "beta" vs "non-beta" so we need to get a little more clever than just "the latest supported version is the best one"
+		tagLatest="$(bashbrew list --uniq "$tmp/$base:latest")"
+		for python in "${pythonVersions[@]}"; do
+			if tagPython="$(bashbrew list --uniq "$tmp/$base:$python" 2>/dev/null)" && [ "$tagLatest" = "$tagPython" ]; then
+				latest[$base]="$python"
+				break
+			fi
+		done
+	fi
 	for python in "${pythonVersions[@]}" "${pythonVersions[@]/%/-rc}"; do
 		for variant in "${variants[@]}"; do
 			from=
