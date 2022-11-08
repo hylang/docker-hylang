@@ -1,7 +1,7 @@
 FROM pypy:3.8-windowsservercore-1809
 
-ENV HY_VERSION 0.24.0
-ENV HYRULE_VERSION 0.2
+ENV HY_VERSION 0.25.0
+ENV HYRULE_VERSION 0.2.1
 
 RUN pip install --no-cache-dir ('hy == {0}' -f $env:HY_VERSION) ('hyrule == {0}' -f $env:HYRULE_VERSION)
 
