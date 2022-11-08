@@ -40,11 +40,11 @@ bases=(
 )
 variants=(
 	bullseye buster
-	alpine3.15 alpine3.14
+	alpine3.16 alpine3.15
 	windowsservercore-ltsc2022 windowsservercore-1809
 )
 declare -A variantAliases=(
-	[alpine3.15]='alpine'
+	[alpine3.16]='alpine'
 )
 declare -A sharedTags=(
 	[bullseye]='latest'
