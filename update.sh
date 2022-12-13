@@ -44,7 +44,7 @@ variants=(
 	windowsservercore-ltsc2022 windowsservercore-1809
 )
 declare -A variantAliases=(
-	[alpine3.16]='alpine'
+	[alpine3.17]='alpine'
 )
 declare -A sharedTags=(
 	[bullseye]='latest'

@@ -1,8 +1,0 @@
-FROM pypy:3.7-slim-buster
-
-ENV HY_VERSION 0.25.0
-ENV HYRULE_VERSION 0.2.1
-
-RUN pip install --no-cache-dir "hy == $HY_VERSION" "hyrule == $HYRULE_VERSION"
-
-CMD ["hy"]
