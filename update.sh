@@ -47,7 +47,7 @@ declare -A variantAliases=(
 	[alpine3.18]='alpine'
 )
 declare -A sharedTags=(
-	[bullseye]='latest'
+	[bookworm]='latest'
 )
 for variant in "${variants[@]}"; do if [[ "$variant" == windowsservercore-* ]]; then sharedTags[$variant]='latest'; fi; done
 
