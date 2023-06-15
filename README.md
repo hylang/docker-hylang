@@ -2,7 +2,7 @@
 
 ## Maintained by: [Paul Tagliamonte, Hy BDFL](https://github.com/hylang/hy)
 
-This is the Git repo of the [Docker "Official Image"](https://github.com/docker-library/official-images#what-are-official-images) for [`hylang`](https://hub.docker.com/_/hylang/) (not to be confused with any official `hylang` image provided by `hylang` upstream). See [the Docker Hub page](https://hub.docker.com/_/hylang/) for the full readme on how to use this Docker image and for information regarding contributing and issues.
+This is the Git repo of the [Docker "Official Image"](https://github.com/docker-library/official-images#what-are-official-images) for [`hylang`](https://hub.docker.com/_/hylang/). See [the Docker Hub page](https://hub.docker.com/_/hylang/) for the full readme on how to use this Docker image and for information regarding contributing and issues.
 
 The [full image description on Docker Hub](https://hub.docker.com/_/hylang/) is generated/maintained over in [the docker-library/docs repository](https://github.com/docker-library/docs), specifically in [the `hylang` directory](https://github.com/docker-library/docs/tree/master/hylang).
 
