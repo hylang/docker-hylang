@@ -1,4 +1,4 @@
-FROM pypy:3.9-slim-buster
+FROM python:3.8-slim-bookworm
 
 ENV HY_VERSION 0.26.0
 ENV HYRULE_VERSION 0.3.0

@@ -39,7 +39,7 @@ bases=(
 	pypy
 )
 variants=(
-	bullseye buster
+	bookworm bullseye buster
 	alpine3.18 alpine3.17
 	windowsservercore-ltsc2022 windowsservercore-1809
 )
