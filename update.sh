@@ -151,14 +151,8 @@ for base in "${bases[@]}"; do
 			target="Dockerfile.$hyTag" # "dockerfiles-generated/Dockerfile.python3.7-stretch", etc.
 
 			case "$variant" in
-				windowsservercore-*)
-					case "${python%-rc}" in
-						3.6 | 3.7 | 3.8 | 3.9) ;;
-						*) continue ;; # https://github.com/hylang/hy/issues/2114: Python 3.10 + Windows == incompatible thanks to pyreadline
-					esac
-					template='Dockerfile-windows.template'
-					;;
-				*) template='Dockerfile-linux.template' ;;
+				windowsservercore-*) template='Dockerfile-windows.template' ;;
+				*)                   template='Dockerfile-linux.template'   ;;
 			esac
 
 			echo "- $from ($target)"
