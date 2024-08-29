@@ -1,8 +1,0 @@
-FROM pypy:3.9-slim-bookworm
-
-ENV HY_VERSION 0.29.0
-ENV HYRULE_VERSION 0.6.0
-
-RUN pip install --no-cache-dir "hy == $HY_VERSION" "hyrule == $HYRULE_VERSION"
-
-CMD ["hy"]
