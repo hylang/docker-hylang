@@ -150,8 +150,6 @@ for base in "${bases[@]}"; do
 			hyTag="$base$python-$variant" # "python3.7-stretch", "pypy2.7-stretch", etc
 			target="Dockerfile.$hyTag" # "dockerfiles-generated/Dockerfile.python3.7-stretch", etc.
 
-			echo "- $from ($target)"
-
 			case "$variant" in
 				windowsservercore-*)
 					case "${python%-rc}" in
@@ -162,6 +160,8 @@ for base in "${bases[@]}"; do
 					;;
 				*) template='Dockerfile-linux.template' ;;
 			esac
+
+			echo "- $from ($target)"
 
 			sed -r \
 				-e "s!%%FROM%%!$from!g" \
