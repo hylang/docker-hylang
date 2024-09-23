@@ -22,16 +22,31 @@ hyrule="$(jq -r '.info.version' <<<"$hyrule")"
 
 echo "Hy $version (hyrule $hyrule)"
 
+# TODO this was all written to consume "constraints" on the hy releases, which they no longer provide and we have to use "requires_python" ("python_requires") instead, which is sane, but also harder for us to do and we probably need to flip this whole process on its head and gather a list of *possible* Python versions and *then* filter it based on requires_python constraints (which can include "!=X.Y", etc) 🤔
 pythonVersions="$(
 	jq -r '
-		.info.classifiers[]
-		| select(startswith("Programming Language :: Python :: "))
-		| ltrimstr("Programming Language :: Python :: ")
-		| select(test("^[0-9]+[.][0-9]+"))
+		.info.requires_python
+		| split("\\s*,\\s*"; "")
+		# TODO this is a hack, it is bad, and Tianon feels bad:
+		| map(
+			if startswith("<3.") then
+				ltrimstr("<3.")
+				| tonumber # this does *not* need "-1" because "range()" below is exclusive of the upper bound
+			elif startswith(">=3.") then
+				ltrimstr(">=3.")
+				| tonumber
+			else empty end
+		)
+		| if length != 2 then error("unexpected requires_python constraints: \(.)") else
+			sort
+		end
+		| [ range(.[0]; .[1]) ]
+		| map("3.\(.)")
+		| reverse
 		| @sh
-	' <<<"$pypi" \
-		| sort -rV
+	' <<<"$pypi"
 )"
+[ -n "$pythonVersions" ]
 eval "pythonVersions=( $pythonVersions )"
 
 bases=(
@@ -90,7 +105,7 @@ versionAliases+=( latest )
 
 command -v bashbrew > /dev/null
 for base in "${bases[@]}"; do
-	wget -qO "$tmp/$base" "https://github.com/docker-library/official-images/raw/master/library/$base"
+	wget -qO "$tmp/$base" "https://github.com/docker-library/official-images/raw/HEAD/library/$base"
 	if [ "$base" = 'pypy' ]; then
 		# pypy is kind of unique about how they handle "beta" vs "non-beta" so we need to get a little more clever than just "the latest supported version is the best one"
 		tagLatest="$(bashbrew list --uniq "$tmp/$base:latest")"
