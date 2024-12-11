@@ -12,11 +12,11 @@ Tags: 1.0.0-python3.13-bullseye, 1.0-python3.13-bullseye, 1-python3.13-bullseye,
 Architectures: amd64, arm32v7, arm64v8, i386
 File: Dockerfile.python3.13-bullseye
 
-Tags: 1.0.0-python3.13-alpine3.21, 1.0-python3.13-alpine3.21, 1-python3.13-alpine3.21, python3.13-alpine3.21, 1.0.0-alpine3.21, 1.0-alpine3.21, 1-alpine3.21, alpine3.21
+Tags: 1.0.0-python3.13-alpine3.21, 1.0-python3.13-alpine3.21, 1-python3.13-alpine3.21, python3.13-alpine3.21, 1.0.0-alpine3.21, 1.0-alpine3.21, 1-alpine3.21, alpine3.21, 1.0.0-python3.13-alpine, 1.0-python3.13-alpine, 1-python3.13-alpine, python3.13-alpine, 1.0.0-alpine, 1.0-alpine, 1-alpine, alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.13-alpine3.21
 
-Tags: 1.0.0-python3.13-alpine3.20, 1.0-python3.13-alpine3.20, 1-python3.13-alpine3.20, python3.13-alpine3.20, 1.0.0-alpine3.20, 1.0-alpine3.20, 1-alpine3.20, alpine3.20, 1.0.0-python3.13-alpine, 1.0-python3.13-alpine, 1-python3.13-alpine, python3.13-alpine, 1.0.0-alpine, 1.0-alpine, 1-alpine, alpine
+Tags: 1.0.0-python3.13-alpine3.20, 1.0-python3.13-alpine3.20, 1-python3.13-alpine3.20, python3.13-alpine3.20, 1.0.0-alpine3.20, 1.0-alpine3.20, 1-alpine3.20, alpine3.20
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.13-alpine3.20
 
@@ -41,11 +41,11 @@ Tags: 1.0.0-python3.12-bullseye, 1.0-python3.12-bullseye, 1-python3.12-bullseye,
 Architectures: amd64, arm32v7, arm64v8, i386
 File: Dockerfile.python3.12-bullseye
 
-Tags: 1.0.0-python3.12-alpine3.21, 1.0-python3.12-alpine3.21, 1-python3.12-alpine3.21, python3.12-alpine3.21
+Tags: 1.0.0-python3.12-alpine3.21, 1.0-python3.12-alpine3.21, 1-python3.12-alpine3.21, python3.12-alpine3.21, 1.0.0-python3.12-alpine, 1.0-python3.12-alpine, 1-python3.12-alpine, python3.12-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.12-alpine3.21
 
-Tags: 1.0.0-python3.12-alpine3.20, 1.0-python3.12-alpine3.20, 1-python3.12-alpine3.20, python3.12-alpine3.20, 1.0.0-python3.12-alpine, 1.0-python3.12-alpine, 1-python3.12-alpine, python3.12-alpine
+Tags: 1.0.0-python3.12-alpine3.20, 1.0-python3.12-alpine3.20, 1-python3.12-alpine3.20, python3.12-alpine3.20
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.12-alpine3.20
 
@@ -70,11 +70,11 @@ Tags: 1.0.0-python3.11-bullseye, 1.0-python3.11-bullseye, 1-python3.11-bullseye,
 Architectures: amd64, arm32v7, arm64v8, i386
 File: Dockerfile.python3.11-bullseye
 
-Tags: 1.0.0-python3.11-alpine3.21, 1.0-python3.11-alpine3.21, 1-python3.11-alpine3.21, python3.11-alpine3.21
+Tags: 1.0.0-python3.11-alpine3.21, 1.0-python3.11-alpine3.21, 1-python3.11-alpine3.21, python3.11-alpine3.21, 1.0.0-python3.11-alpine, 1.0-python3.11-alpine, 1-python3.11-alpine, python3.11-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.11-alpine3.21
 
-Tags: 1.0.0-python3.11-alpine3.20, 1.0-python3.11-alpine3.20, 1-python3.11-alpine3.20, python3.11-alpine3.20, 1.0.0-python3.11-alpine, 1.0-python3.11-alpine, 1-python3.11-alpine, python3.11-alpine
+Tags: 1.0.0-python3.11-alpine3.20, 1.0-python3.11-alpine3.20, 1-python3.11-alpine3.20, python3.11-alpine3.20
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x
 File: Dockerfile.python3.11-alpine3.20
 
@@ -87,11 +87,11 @@ Tags: 1.0.0-python3.10-bullseye, 1.0-python3.10-bullseye, 1-python3.10-bullseye,
 Architectures: amd64, arm32v7, arm64v8, i386
 File: Dockerfile.python3.10-bullseye
 
-Tags: 1.0.0-python3.10-alpine3.21, 1.0-python3.10-alpine3.21, 1-python3.10-alpine3.21, python3.10-alpine3.21
+Tags: 1.0.0-python3.10-alpine3.21, 1.0-python3.10-alpine3.21, 1-python3.10-alpine3.21, python3.10-alpine3.21, 1.0.0-python3.10-alpine, 1.0-python3.10-alpine, 1-python3.10-alpine, python3.10-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 File: Dockerfile.python3.10-alpine3.21
 
-Tags: 1.0.0-python3.10-alpine3.20, 1.0-python3.10-alpine3.20, 1-python3.10-alpine3.20, python3.10-alpine3.20, 1.0.0-python3.10-alpine, 1.0-python3.10-alpine, 1-python3.10-alpine, python3.10-alpine
+Tags: 1.0.0-python3.10-alpine3.20, 1.0-python3.10-alpine3.20, 1-python3.10-alpine3.20, python3.10-alpine3.20
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 File: Dockerfile.python3.10-alpine3.20
 
@@ -104,11 +104,11 @@ Tags: 1.0.0-python3.9-bullseye, 1.0-python3.9-bullseye, 1-python3.9-bullseye, py
 Architectures: amd64, arm32v7, arm64v8, i386
 File: Dockerfile.python3.9-bullseye
 
-Tags: 1.0.0-python3.9-alpine3.21, 1.0-python3.9-alpine3.21, 1-python3.9-alpine3.21, python3.9-alpine3.21
+Tags: 1.0.0-python3.9-alpine3.21, 1.0-python3.9-alpine3.21, 1-python3.9-alpine3.21, python3.9-alpine3.21, 1.0.0-python3.9-alpine, 1.0-python3.9-alpine, 1-python3.9-alpine, python3.9-alpine
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 File: Dockerfile.python3.9-alpine3.21
 
-Tags: 1.0.0-python3.9-alpine3.20, 1.0-python3.9-alpine3.20, 1-python3.9-alpine3.20, python3.9-alpine3.20, 1.0.0-python3.9-alpine, 1.0-python3.9-alpine, 1-python3.9-alpine, python3.9-alpine
+Tags: 1.0.0-python3.9-alpine3.20, 1.0-python3.9-alpine3.20, 1-python3.9-alpine3.20, python3.9-alpine3.20
 Architectures: amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, riscv64, s390x
 File: Dockerfile.python3.9-alpine3.20
 

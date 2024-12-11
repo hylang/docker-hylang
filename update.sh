@@ -59,7 +59,7 @@ variants=(
 	windowsservercore-ltsc2022 windowsservercore-1809
 )
 declare -A variantAliases=(
-	[alpine3.20]='alpine'
+	[alpine3.21]='alpine'
 )
 declare -A sharedTags=(
 	[bookworm]='latest'
