@@ -1,4 +1,4 @@
-FROM pypy:3.11-windowsservercore-ltsc2025
+FROM python:3.14-rc-windowsservercore-1809
 
 ENV HY_VERSION 1.1.0
 ENV HYRULE_VERSION 1.0.0
