@@ -4,19 +4,6 @@ set -Eeuo pipefail
 pypi="$(wget -qO- 'https://pypi.org/pypi/hy/json')"
 version="$(jq -r '.info.version' <<<"$pypi")"
 
-# TODO https://github.com/hylang/hy/pull/2035
-version="$(
-	jq -r '
-		.releases
-		| to_entries[]
-		| .value[0].upload_time_iso_8601 + " " + .key
-	' <<<"$pypi" \
-		| sort -n \
-		| tail -1 \
-		| cut -d' ' -f2
-)"
-pypi="$(wget -qO- "https://pypi.org/pypi/hy/$version/json")"
-
 hyrule="$(wget -qO- 'https://pypi.org/pypi/hyrule/json')"
 hyrule="$(jq -r '.info.version' <<<"$hyrule")"
 
