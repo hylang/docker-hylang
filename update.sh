@@ -42,7 +42,7 @@ bases=(
 )
 variants=(
 	bookworm bullseye
-	alpine3.21 alpine3.20
+	alpine3.22 alpine3.21 alpine3.20
 	windowsservercore-ltsc2025 windowsservercore-ltsc2022
 )
 declare -A variantAliases=(
