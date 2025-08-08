@@ -41,7 +41,7 @@ bases=(
 	pypy
 )
 variants=(
-	bookworm bullseye
+	trixie bookworm bullseye
 	alpine3.22 alpine3.21
 	windowsservercore-ltsc2025 windowsservercore-ltsc2022
 )
