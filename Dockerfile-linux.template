@@ -1,8 +1,0 @@
-FROM %%FROM%%
-
-ENV HY_VERSION %%VERSION%%
-ENV HYRULE_VERSION %%HYRULE%%
-
-RUN pip install --no-cache-dir "hy == $HY_VERSION" "hyrule == $HYRULE_VERSION"
-
-CMD ["hy"]
