@@ -1,0 +1,390 @@
+{
+	"latest": {
+		"version": "1.1.0",
+		"hyrule": {
+			"version": "1.0.0"
+		},
+		"variants": {
+			"python3.14-trixie": {
+				"from": "python:3.14-slim-trixie",
+				"arches": [
+					"amd64",
+					"arm32v5",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.14-bookworm": {
+				"from": "python:3.14-slim-bookworm",
+				"arches": [
+					"amd64",
+					"arm32v5",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"python3.14-alpine3.22": {
+				"from": "python:3.14-alpine3.22",
+				"arches": [
+					"amd64",
+					"arm32v6",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.14-alpine3.21": {
+				"from": "python:3.14-alpine3.21",
+				"arches": [
+					"amd64",
+					"arm32v6",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.14-windowsservercore-ltsc2025": {
+				"from": "python:3.14-windowsservercore-ltsc2025",
+				"arches": [
+					"windows-amd64"
+				],
+				"constraints": [
+					"windowsservercore-ltsc2025"
+				]
+			},
+			"python3.14-windowsservercore-ltsc2022": {
+				"from": "python:3.14-windowsservercore-ltsc2022",
+				"arches": [
+					"windows-amd64"
+				],
+				"constraints": [
+					"windowsservercore-ltsc2022"
+				]
+			},
+			"python3.13-trixie": {
+				"from": "python:3.13-slim-trixie",
+				"arches": [
+					"amd64",
+					"arm32v5",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.13-bookworm": {
+				"from": "python:3.13-slim-bookworm",
+				"arches": [
+					"amd64",
+					"arm32v5",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"python3.13-alpine3.22": {
+				"from": "python:3.13-alpine3.22",
+				"arches": [
+					"amd64",
+					"arm32v6",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.13-alpine3.21": {
+				"from": "python:3.13-alpine3.21",
+				"arches": [
+					"amd64",
+					"arm32v6",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.13-windowsservercore-ltsc2025": {
+				"from": "python:3.13-windowsservercore-ltsc2025",
+				"arches": [
+					"windows-amd64"
+				],
+				"constraints": [
+					"windowsservercore-ltsc2025"
+				]
+			},
+			"python3.13-windowsservercore-ltsc2022": {
+				"from": "python:3.13-windowsservercore-ltsc2022",
+				"arches": [
+					"windows-amd64"
+				],
+				"constraints": [
+					"windowsservercore-ltsc2022"
+				]
+			},
+			"python3.12-trixie": {
+				"from": "python:3.12-slim-trixie",
+				"arches": [
+					"amd64",
+					"arm32v5",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.12-bookworm": {
+				"from": "python:3.12-slim-bookworm",
+				"arches": [
+					"amd64",
+					"arm32v5",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"python3.12-alpine3.22": {
+				"from": "python:3.12-alpine3.22",
+				"arches": [
+					"amd64",
+					"arm32v6",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.12-alpine3.21": {
+				"from": "python:3.12-alpine3.21",
+				"arches": [
+					"amd64",
+					"arm32v6",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.11-trixie": {
+				"from": "python:3.11-slim-trixie",
+				"arches": [
+					"amd64",
+					"arm32v5",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.11-bookworm": {
+				"from": "python:3.11-slim-bookworm",
+				"arches": [
+					"amd64",
+					"arm32v5",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"python3.11-alpine3.22": {
+				"from": "python:3.11-alpine3.22",
+				"arches": [
+					"amd64",
+					"arm32v6",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.11-alpine3.21": {
+				"from": "python:3.11-alpine3.21",
+				"arches": [
+					"amd64",
+					"arm32v6",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.10-trixie": {
+				"from": "python:3.10-slim-trixie",
+				"arches": [
+					"amd64",
+					"arm32v5",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.10-bookworm": {
+				"from": "python:3.10-slim-bookworm",
+				"arches": [
+					"amd64",
+					"arm32v5",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"python3.10-alpine3.22": {
+				"from": "python:3.10-alpine3.22",
+				"arches": [
+					"amd64",
+					"arm32v6",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.10-alpine3.21": {
+				"from": "python:3.10-alpine3.21",
+				"arches": [
+					"amd64",
+					"arm32v6",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.9-trixie": {
+				"from": "python:3.9-slim-trixie",
+				"arches": [
+					"amd64",
+					"arm32v5",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.9-bookworm": {
+				"from": "python:3.9-slim-bookworm",
+				"arches": [
+					"amd64",
+					"arm32v5",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"mips64le",
+					"ppc64le",
+					"s390x"
+				]
+			},
+			"python3.9-alpine3.22": {
+				"from": "python:3.9-alpine3.22",
+				"arches": [
+					"amd64",
+					"arm32v6",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"python3.9-alpine3.21": {
+				"from": "python:3.9-alpine3.21",
+				"arches": [
+					"amd64",
+					"arm32v6",
+					"arm32v7",
+					"arm64v8",
+					"i386",
+					"ppc64le",
+					"riscv64",
+					"s390x"
+				]
+			},
+			"pypy3.11-trixie": {
+				"from": "pypy:3.11-slim-trixie",
+				"arches": [
+					"amd64",
+					"arm64v8",
+					"i386"
+				],
+				"pypy:latest": true
+			},
+			"pypy3.11-bookworm": {
+				"from": "pypy:3.11-slim-bookworm",
+				"arches": [
+					"amd64",
+					"arm64v8",
+					"i386"
+				]
+			},
+			"pypy3.11-windowsservercore-ltsc2025": {
+				"from": "pypy:3.11-windowsservercore-ltsc2025",
+				"arches": [
+					"windows-amd64"
+				],
+				"constraints": [
+					"windowsservercore-ltsc2025"
+				],
+				"pypy:latest": true
+			},
+			"pypy3.11-windowsservercore-ltsc2022": {
+				"from": "pypy:3.11-windowsservercore-ltsc2022",
+				"arches": [
+					"windows-amd64"
+				],
+				"constraints": [
+					"windowsservercore-ltsc2022"
+				],
+				"pypy:latest": true
+			}
+		}
+	}
+}
