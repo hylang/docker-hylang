@@ -7,7 +7,7 @@
 FROM python:3.11-slim-trixie
 
 ENV HY_VERSION 1.1.0
-ENV HYRULE_VERSION 1.0.0
+ENV HYRULE_VERSION 1.0.1
 
 RUN pip install --no-cache-dir "hy == $HY_VERSION" "hyrule == $HYRULE_VERSION"
 
