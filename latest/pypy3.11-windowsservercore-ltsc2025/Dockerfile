@@ -6,7 +6,7 @@
 
 FROM pypy:3.11-windowsservercore-ltsc2025
 
-ENV HY_VERSION 1.2.0
+ENV HY_VERSION 1.3.0
 ENV HYRULE_VERSION 1.0.1
 
 RUN pip install --no-cache-dir ('hy == {0}' -f $env:HY_VERSION) ('hyrule == {0}' -f $env:HYRULE_VERSION)

@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM python:3.13-windowsservercore-ltsc2022
+FROM python:3.15-rc-windowsservercore-ltsc2025
 
 ENV HY_VERSION 1.3.0
 ENV HYRULE_VERSION 1.0.1
