@@ -7,7 +7,7 @@
 FROM python:3.15-rc-alpine3.23
 
 ENV HY_VERSION 1.3.0
-ENV HYRULE_VERSION 1.0.1
+ENV HYRULE_VERSION 1.1.0
 
 RUN pip install --no-cache-dir "hy == $HY_VERSION" "hyrule == $HYRULE_VERSION"
 
