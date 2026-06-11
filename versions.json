@@ -30,8 +30,8 @@
 					"s390x"
 				]
 			},
-			"python3.15-rc-alpine3.23": {
-				"from": "python:3.15-rc-alpine3.23",
+			"python3.15-rc-alpine3.24": {
+				"from": "python:3.15-rc-alpine3.24",
 				"arches": [
 					"amd64",
 					"arm32v6",
@@ -43,8 +43,8 @@
 					"s390x"
 				]
 			},
-			"python3.15-rc-alpine3.22": {
-				"from": "python:3.15-rc-alpine3.22",
+			"python3.15-rc-alpine3.23": {
+				"from": "python:3.15-rc-alpine3.23",
 				"arches": [
 					"amd64",
 					"arm32v6",
@@ -99,8 +99,8 @@
 					"s390x"
 				]
 			},
-			"python3.14-alpine3.23": {
-				"from": "python:3.14-alpine3.23",
+			"python3.14-alpine3.24": {
+				"from": "python:3.14-alpine3.24",
 				"arches": [
 					"amd64",
 					"arm32v6",
@@ -112,8 +112,8 @@
 					"s390x"
 				]
 			},
-			"python3.14-alpine3.22": {
-				"from": "python:3.14-alpine3.22",
+			"python3.14-alpine3.23": {
+				"from": "python:3.14-alpine3.23",
 				"arches": [
 					"amd64",
 					"arm32v6",
@@ -168,8 +168,8 @@
 					"s390x"
 				]
 			},
-			"python3.13-alpine3.23": {
-				"from": "python:3.13-alpine3.23",
+			"python3.13-alpine3.24": {
+				"from": "python:3.13-alpine3.24",
 				"arches": [
 					"amd64",
 					"arm32v6",
@@ -181,8 +181,8 @@
 					"s390x"
 				]
 			},
-			"python3.13-alpine3.22": {
-				"from": "python:3.13-alpine3.22",
+			"python3.13-alpine3.23": {
+				"from": "python:3.13-alpine3.23",
 				"arches": [
 					"amd64",
 					"arm32v6",
@@ -237,8 +237,8 @@
 					"s390x"
 				]
 			},
-			"python3.12-alpine3.23": {
-				"from": "python:3.12-alpine3.23",
+			"python3.12-alpine3.24": {
+				"from": "python:3.12-alpine3.24",
 				"arches": [
 					"amd64",
 					"arm32v6",
@@ -250,8 +250,8 @@
 					"s390x"
 				]
 			},
-			"python3.12-alpine3.22": {
-				"from": "python:3.12-alpine3.22",
+			"python3.12-alpine3.23": {
+				"from": "python:3.12-alpine3.23",
 				"arches": [
 					"amd64",
 					"arm32v6",
@@ -288,8 +288,8 @@
 					"s390x"
 				]
 			},
-			"python3.11-alpine3.23": {
-				"from": "python:3.11-alpine3.23",
+			"python3.11-alpine3.24": {
+				"from": "python:3.11-alpine3.24",
 				"arches": [
 					"amd64",
 					"arm32v6",
@@ -301,8 +301,8 @@
 					"s390x"
 				]
 			},
-			"python3.11-alpine3.22": {
-				"from": "python:3.11-alpine3.22",
+			"python3.11-alpine3.23": {
+				"from": "python:3.11-alpine3.23",
 				"arches": [
 					"amd64",
 					"arm32v6",
@@ -339,8 +339,8 @@
 					"s390x"
 				]
 			},
-			"python3.10-alpine3.23": {
-				"from": "python:3.10-alpine3.23",
+			"python3.10-alpine3.24": {
+				"from": "python:3.10-alpine3.24",
 				"arches": [
 					"amd64",
 					"arm32v6",
@@ -352,8 +352,8 @@
 					"s390x"
 				]
 			},
-			"python3.10-alpine3.22": {
-				"from": "python:3.10-alpine3.22",
+			"python3.10-alpine3.23": {
+				"from": "python:3.10-alpine3.23",
 				"arches": [
 					"amd64",
 					"arm32v6",
