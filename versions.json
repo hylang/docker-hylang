@@ -353,6 +353,40 @@
 					"s390x"
 				]
 			},
+			"pypy3.12-trixie": {
+				"from": "pypy:3.12-slim-trixie",
+				"arches": [
+					"amd64",
+					"arm64v8",
+					"i386"
+				]
+			},
+			"pypy3.12-bookworm": {
+				"from": "pypy:3.12-slim-bookworm",
+				"arches": [
+					"amd64",
+					"arm64v8",
+					"i386"
+				]
+			},
+			"pypy3.12-windowsservercore-ltsc2025": {
+				"from": "pypy:3.12-windowsservercore-ltsc2025",
+				"arches": [
+					"windows-amd64"
+				],
+				"constraints": [
+					"windowsservercore-ltsc2025"
+				]
+			},
+			"pypy3.12-windowsservercore-ltsc2022": {
+				"from": "pypy:3.12-windowsservercore-ltsc2022",
+				"arches": [
+					"windows-amd64"
+				],
+				"constraints": [
+					"windowsservercore-ltsc2022"
+				]
+			},
 			"pypy3.11-trixie": {
 				"from": "pypy:3.11-slim-trixie",
 				"arches": [
