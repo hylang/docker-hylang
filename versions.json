@@ -304,55 +304,6 @@
 					"s390x"
 				]
 			},
-			"python3.10-trixie": {
-				"from": "python:3.10-slim-trixie",
-				"arches": [
-					"amd64",
-					"arm32v5",
-					"arm32v7",
-					"arm64v8",
-					"i386",
-					"ppc64le",
-					"riscv64",
-					"s390x"
-				]
-			},
-			"python3.10-bookworm": {
-				"from": "python:3.10-slim-bookworm",
-				"arches": [
-					"amd64",
-					"arm32v7",
-					"arm64v8",
-					"i386",
-					"ppc64le"
-				]
-			},
-			"python3.10-alpine3.24": {
-				"from": "python:3.10-alpine3.24",
-				"arches": [
-					"amd64",
-					"arm32v6",
-					"arm32v7",
-					"arm64v8",
-					"i386",
-					"ppc64le",
-					"riscv64",
-					"s390x"
-				]
-			},
-			"python3.10-alpine3.23": {
-				"from": "python:3.10-alpine3.23",
-				"arches": [
-					"amd64",
-					"arm32v6",
-					"arm32v7",
-					"arm64v8",
-					"i386",
-					"ppc64le",
-					"riscv64",
-					"s390x"
-				]
-			},
 			"pypy3.12-trixie": {
 				"from": "pypy:3.12-slim-trixie",
 				"arches": [
