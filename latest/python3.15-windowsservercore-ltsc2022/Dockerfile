@@ -4,11 +4,11 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM python:3.15-rc-slim-bookworm
+FROM python:3.15-windowsservercore-ltsc2022
 
 ENV HY_VERSION 1.3.1
 ENV HYRULE_VERSION 1.1.0
 
-RUN pip install --no-cache-dir "hy == $HY_VERSION" "hyrule == $HYRULE_VERSION"
+RUN pip install --no-cache-dir ('hy == {0}' -f $env:HY_VERSION) ('hyrule == {0}' -f $env:HYRULE_VERSION)
 
 CMD ["hy"]

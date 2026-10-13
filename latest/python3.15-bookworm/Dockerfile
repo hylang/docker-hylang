@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM python:3.15-rc-slim-trixie
+FROM python:3.15-slim-bookworm
 
 ENV HY_VERSION 1.3.1
 ENV HYRULE_VERSION 1.1.0

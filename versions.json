@@ -5,8 +5,8 @@
 			"version": "1.1.0"
 		},
 		"variants": {
-			"python3.15-rc-trixie": {
-				"from": "python:3.15-rc-slim-trixie",
+			"python3.15-trixie": {
+				"from": "python:3.15-slim-trixie",
 				"arches": [
 					"amd64",
 					"arm32v5",
@@ -18,8 +18,8 @@
 					"s390x"
 				]
 			},
-			"python3.15-rc-bookworm": {
-				"from": "python:3.15-rc-slim-bookworm",
+			"python3.15-bookworm": {
+				"from": "python:3.15-slim-bookworm",
 				"arches": [
 					"amd64",
 					"arm32v7",
@@ -28,8 +28,8 @@
 					"ppc64le"
 				]
 			},
-			"python3.15-rc-alpine3.24": {
-				"from": "python:3.15-rc-alpine3.24",
+			"python3.15-alpine3.24": {
+				"from": "python:3.15-alpine3.24",
 				"arches": [
 					"amd64",
 					"arm32v6",
@@ -41,8 +41,8 @@
 					"s390x"
 				]
 			},
-			"python3.15-rc-alpine3.23": {
-				"from": "python:3.15-rc-alpine3.23",
+			"python3.15-alpine3.23": {
+				"from": "python:3.15-alpine3.23",
 				"arches": [
 					"amd64",
 					"arm32v6",
@@ -54,8 +54,8 @@
 					"s390x"
 				]
 			},
-			"python3.15-rc-windowsservercore-ltsc2025": {
-				"from": "python:3.15-rc-windowsservercore-ltsc2025",
+			"python3.15-windowsservercore-ltsc2025": {
+				"from": "python:3.15-windowsservercore-ltsc2025",
 				"arches": [
 					"windows-amd64"
 				],
@@ -63,8 +63,8 @@
 					"windowsservercore-ltsc2025"
 				]
 			},
-			"python3.15-rc-windowsservercore-ltsc2022": {
-				"from": "python:3.15-rc-windowsservercore-ltsc2022",
+			"python3.15-windowsservercore-ltsc2022": {
+				"from": "python:3.15-windowsservercore-ltsc2022",
 				"arches": [
 					"windows-amd64"
 				],
