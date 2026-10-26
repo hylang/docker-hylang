@@ -188,24 +188,6 @@
 					"s390x"
 				]
 			},
-			"python3.13-windowsservercore-ltsc2025": {
-				"from": "python:3.13-windowsservercore-ltsc2025",
-				"arches": [
-					"windows-amd64"
-				],
-				"constraints": [
-					"windowsservercore-ltsc2025"
-				]
-			},
-			"python3.13-windowsservercore-ltsc2022": {
-				"from": "python:3.13-windowsservercore-ltsc2022",
-				"arches": [
-					"windows-amd64"
-				],
-				"constraints": [
-					"windowsservercore-ltsc2022"
-				]
-			},
 			"python3.12-trixie": {
 				"from": "python:3.12-slim-trixie",
 				"arches": [
